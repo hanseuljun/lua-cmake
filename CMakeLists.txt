@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(LuaCMake)
+project(LuaCMake LANGUAGES C)
 
 set(LUA_LIB_SRCS
   lua/lapi.c
@@ -37,4 +37,4 @@ set(LUA_LIB_SRCS
 )
 
 add_library(lua_static STATIC ${LUA_LIB_SRCS})
-target_include_directories(lua_static PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(lua_static PUBLIC ${PROJECT_SOURCE_DIR}/lua)
